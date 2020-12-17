@@ -1,0 +1,56 @@
+\documentclass[11pt, article]{article}
+\pagestyle{empty}
+% pre\'ambulo
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+%\usepackage[spanish,activeacute]{babel}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{mathtools}
+\usepackage{babel}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage{vmargin}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{subcaption}
+%\usepackage[utf8]{inputenc}
+
+\setpapersize{A4}
+\setmargins{1.5cm}             % margen izquierdo
+{1.5cm}                        % margen superior
+{18cm}                         % anchura del texto
+{25.42cm}                      % altura del texto
+{10pt}                         % altura de los encabezados
+{0cm}                          % espacio entre el texto y los encabezados
+{0pt}                          % altura del pie de página
+{1cm}                          % espacio entre el texto y el pie de página
+
+\title{Fracciones continuadas}
+\author{}
+\date{}
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section*{Introducción}
+Las fracciones continuadas tienen su comienzo como...
+\section*{Sobre el Teorema de Lagrange}
+La motivación es demostrar el teorema de Lagrange
+
+\textbf{Teorema de Lagrange} Sea $\alpha \in \mathbb{R}$. La fraccion continuada de $\alpha$ es periodica si y solo si existen $a, b, c \in\mathbb{Z}$ con $a\not=0$ tales que $a\alpha^2 + b\alpha + c = 0$.
+
+Empecemos suponiendo que $\alpha$ es una fracción continuada periódica, de lo cual $\alpha= [a_0,a_1,...,a_{j,\theta}]$, donde $\theta=\overline{[b_0,b_1,..,b_{n-1}]}$, por la ecuación (7.8) se sigue que
+\[
+\theta =\dfrac{\theta h_{n-1}+h_{n-2}}{\theta k_{n-1}+k_{n-2}}
+\]
+y esta es una ecuación cuádratica en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional pero el valor de cualquier fracción continuada simple infinita es irracional(dem), ahora $\alpha$ puede escribirse como 
+\[
+\alpha = [a_0,a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'}
+\]
+donde $\dfrac{m'}{q'}$ y $\dfrac{m}{q}$ son los dos últimos convergentes para $[a_0,a_1,...,a_j]$, pero $\theta$ es de la forma $\dfrac{(a + \sqrt{b})}{c}$ y de aquí $\alpha$ es de forma semejante, debido a que como con $\theta$ puede excluirse la posibilidad de que $\alpha$ sea racional
+
+\end{document}
