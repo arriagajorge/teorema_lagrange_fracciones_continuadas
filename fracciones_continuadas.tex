@@ -37,20 +37,39 @@
 \maketitle
 \thispagestyle{empty}
 \section*{Introducción}
-Las fracciones continuadas tienen su comienzo como...
+    Las fracciones continuadas tienen su comienzo como...
 \section*{Sobre el Teorema de Lagrange}
-La motivación es demostrar el teorema de Lagrange
+    La motivación es demostrar el teorema de Lagrange
 
-\textbf{Teorema de Lagrange} Sea $\alpha \in \mathbb{R}$. La fraccion continuada de $\alpha$ es periodica si y solo si existen $a, b, c \in\mathbb{Z}$ con $a\not=0$ tales que $a\alpha^2 + b\alpha + c = 0$.
+    \textbf{Teorema de Lagrange} Sea $\alpha \in \mathbb{R}$. La fraccion continuada de $\alpha$ es periodica si y solo si existen $a, b, c \in\mathbb{Z}$ con $a\not=0$ tales que $a\alpha^2 + b\alpha + c = 0$.
 
-Empecemos suponiendo que $\alpha$ es una fracción continuada periódica, de lo cual $\alpha= [a_0,a_1,...,a_{j,\theta}]$, donde $\theta=\overline{[b_0,b_1,..,b_{n-1}]}$, por la ecuación (7.8) se sigue que
-\[
-\theta =\dfrac{\theta h_{n-1}+h_{n-2}}{\theta k_{n-1}+k_{n-2}}
-\]
-y esta es una ecuación cuádratica en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional pero el valor de cualquier fracción continuada simple infinita es irracional(dem), ahora $\alpha$ puede escribirse como 
-\[
-\alpha = [a_0,a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'}
-\]
-donde $\dfrac{m'}{q'}$ y $\dfrac{m}{q}$ son los dos últimos convergentes para $[a_0,a_1,...,a_j]$, pero $\theta$ es de la forma $\dfrac{(a + \sqrt{b})}{c}$ y de aquí $\alpha$ es de forma semejante, debido a que como con $\theta$ puede excluirse la posibilidad de que $\alpha$ sea racional
+    Empecemos suponiendo que $\alpha$ es una fracción continuada periódica, de lo cual $\alpha= [a_0,a_1,...,a_{j,\theta}]$, donde $\theta=\overline{[b_0,b_1,..,b_{n-1}]}$, por la ecuación (7.8) se sigue que
+        \[
+        \theta =\dfrac{\theta h_{n-1}+h_{n-2}}{\theta k_{n-1}+k_{n-2}}
+        \]
+    y esta es una ecuación cuádratica en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional pero el valor de cualquier fracción continuada simple infinita es irracional(dem), ahora $\alpha$ puede escribirse como 
+        \[
+        \alpha = [a_0,a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'}
+        \]
+    donde $m'/q'$ y $m/q$ son los dos últimos convergentes para $[a_0,a_1,...,a_j]$, pero $\theta$ es de la forma $(a + \sqrt{b})/c$ y de aquí $\alpha$ es de forma semejante, debido a que como con $\theta$ puede excluirse la posibilidad de que $\alpha$ sea racional
 
+    Ahora supongamos que $\alpha$ es irracional cuadrático, entonces es de la forma $\alpha=(a+\sqrt{b})/c$, con los enteros $a,b,c,d>0$, $c\not=0$, el entero $b$ no es un cuadrado perfecto puesto que $\alpha$ es irracional. Multiplequemos el numerador y el denominador por $|c|$ para obtener 
+        \[
+        \alpha = \dfrac{ac + \sqrt{bc^2}}{c^2} \textnormal{o bien } \alpha=\dfrac{-ac+\sqrt{bc^2}}{-x^2}
+        \]
+    de acuerdo con que $c$ sea positiva o negativa. Así puede escribirse $\alpha$ de la forma
+        \[
+        \alpha = \dfrac{m_0+\sqrt{d}}{q_0}
+        \]
+    donde $q_0|(d-m_0^2)$, $d,m_0$ y $q$ son enteros, $q_0\not=0$, $d$ no es un entero cuadrado perfecto. Escribiendo $\alpha$ en esta forma podemos obtener una formulación sencilla de su desarrlo fraccionario continuado $\overline{[a_0,a_1,...]}$ . Se probara que las siguientes ecuaciones 
+
+        \[
+        a_i=[\alpha_i], \qquad \alpha_i=\dfrac{m_i+\sqrt{d}}{q_i},
+        \]
+        \[
+        m_{i+1}=a_iq_i-m_i, \qquad q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}
+        \]
+    definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(7.7)dem$ y de donde se obtendra el desarrollo continuado de $\alpha$
+
+    En primer lugar, empecemos con 
 \end{document}
