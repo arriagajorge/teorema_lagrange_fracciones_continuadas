@@ -47,7 +47,7 @@
         \[
         \theta =\dfrac{\theta h_{n-1}+h_{n-2}}{\theta k_{n-1}+k_{n-2}}
         \]
-    y esta es una ecuación cuádratica en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional pero el valor de cualquier fracción continuada simple infinita es irracional(dem), ahora $\alpha$ puede escribirse como 
+    y esta es una ecuación cuadrática en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional pero el valor de cualquier fracción continuada simple infinita es irracional(dem), ahora $\alpha$ puede escribirse como 
         \[
         \alpha = [a_0,a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'}
         \]
@@ -62,7 +62,6 @@
         \alpha = \dfrac{m_0+\sqrt{d}}{q_0}
         \]
     donde $q_0|(d-m_0^2)$, $d,m_0$ y $q$ son enteros, $q_0\not=0$, $d$ no es un entero cuadrado perfecto. Escribiendo $\alpha$ en esta forma podemos obtener una formulación sencilla de su desarrlo fraccionario continuado $\overline{[a_0,a_1,...]}$ . Se probara que las siguientes ecuaciones 
-
         \[
         a_i=[\alpha_i], \qquad \alpha_i=\dfrac{m_i+\sqrt{d}}{q_i},
         \]
@@ -71,5 +70,43 @@
         \]
     definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(7.7)dem$ y de donde se obtendra el desarrollo continuado de $\alpha$
 
-    En primer lugar, empecemos con 
+    En primer lugar, empecemos con $\alpha_0,m_0,q_0$ tal y cimo se determinaron anteriormente  y hagmaos $a_0=[\alpha_0]$. Si se conocen $\alpha_i,m_i,q_i,a_i$, entonces se tiene que $m_{i+1}=a_iq_i - m_i$, $q_i=(d-m_{i+q}^2)/q_i, \alpha_{i+1}=(m_{i+1} + \sqrt{d})/q_{i+1}, a_i=[\alpha_{i+1}]$. Es decir las ecuaciones anteriore $(poner numero)$ realmente determinan las sucesiones $\alpha_i,m_i,q_i,a_i$ que son por lo menos reales.
+    
+    Ahora se aplica inducción para probar que los $m_i$ y los $q_i$son enteros tales que $q_i\not=0$ y $q_i|(d-m^2)$. Esto se cumple para $i=0$. Supongamos que es cierto para el $i-$ésimo paso enttonces, se observa que $m_{i+1}=a_iq_i-m_i$ es n entero.Entonces la ecuación 
+         \[
+        q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}=\dfrac{d-m_i^2}{q_i} + 2a_im_i-a_i^2q_i
+        \]
+    establece que $q_{i+1}$ es un entero. Es más $q_i+1$ no puede ser cero, dado que si lo fuera, se tendría $d=m^2_{i+1}$, pero $d$ no es un cuadrado perfecto. Finalmente, se tiene que $q_i=(d-m_{i+1}^2)/q_{i+1}$, de modo que $q_{i+1}|(d-m_{i+1}^2)$
+    
+    A continuación puede verificarse que 
+        \[
+        \alpha_i-a_i=\dfrac{-a_iq_i+m_i+\sqrt{d}}{q_i}=\dfrac{\sqrt{d}-m_{i+1}}{q_i}=\dfrac{d-m_{i+1}^2}{q_i(\sqrt{d}+m_{i+1})}=\dfrac{q_i+1}{\sqrt{d}+m_{i+1}}=\dfrac{1}{\alpha_{i+1}}
+        \]
+    lo cual verifica $(7.7)dem$ y así se ha probado que $\alpha=[a_0,a_1,a_2,...]$, con los $a_i$ definidos por las ecuaciones $nombrarlas$ 
+    
+    Mediante $\alpha^{'}_{i}$ denotamos el conjunto de $\alpha_i$ esto es $\alpha^{'}_{i}=(m_i-\sqrt{d})/q_i$. Dado que el conjunto de un cociente es igual al cociente de lo conjufado se obtiene la ecuación
+        \[
+        \alpha_0{'}=\dfrac{\alpha_n^{'}h_{n-1}+h_{n-2}}{\alpha_n^{'}k_{n-1}+k_{n-2}}
+        \]
+    tomando los conjugado en $?(7.8)$y resolviendo para $\alpha_n^{'}$ se tiene
+        \[
+        \alpha_n^{'}=-\dfrac{k_{n-2}}{k_{n-1}}\left(\dfrac{\alpha_0^{'}-h_{n-2}/k_{n-2}}{\alpha_0^{'}-h_{n-1}/k_{n-1}}\right)
+        \]
+        
+    Conforme $n$ tiende al infinito, tanto $h_{n-1}/k_{n-1}$ como $h_{m-2}/k_{n-2}$ tienden hacia $\alpha_0^{'}$ y por tanto la fracción que se encuentra dentro del paréntesis tiende a 1. Así que para un $n$ lo suficientemente grande, digamos $n>N$, 
+    donde $N$ es fijo, la fracción del paréntesis es positiva y $\alpha_n^{'}$ es negativo, pero recordemos que $\alpha_n^{'}$ es positivo para toda
+    $n\geq 1$ y de aqí que $\alpha_n - \alpha_n^{'}>0$ para $n>N$. Aplicando (7.16) se ve que da $2 \sqrt{d}/q_{n} >0$
+    de aquí que $q_n>0$ para $n>N$.
+    
+    De (7.16) también se deduce que 
+        \[
+        q_nq_{n+1}=d-m^2_{n+1}\leq d, \qquad q_n\leq q_nq_{n+1}\leq d 
+        \]
+        \[
+        m^2_{n+1} < m_{n+1}^2+q_n q_n+1=d, \qquad |m_{n+1}|<\sqrt{d}
+        \]
+    para $n>N$. Supuesto de que $d$ es un enttero positivo fijo se concluye que $q_n$ y $m_{n+1}$ pueden saumir un solo numero fijo de valores posibes para $q_n$ y $m_{n+1}$ pueden asumir sólo un número fijo de valores posibles para $n>N$. De aquñi que las parejas ordenadas $(m_n,q_n)$ pueden asumir sólo un número fijo de valores posibles de la parejas para $n>N$, y por tanto existen enteros distints $j$ y $k$ tales que $m_j=m_k$ y $q_j=q_k$, pueden suponerse que se han escogido $j$ y $k$ tales que $j<k$. Por (7.16), esto implica que $\alpha_j=\alpha_k$ y de aquí que
+        \[
+        \alpha=[a_0,a_1,...,a_{j-1},\overline{a_j,a_{j+1},...,a_{k-1}}]
+        \]
 \end{document}
