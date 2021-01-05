@@ -38,16 +38,84 @@
 \thispagestyle{empty}
 \section*{Introducción}
     Las fracciones continuadas tienen su comienzo como...
-\section*{Sobre el Teorema de Lagrange}
-    La motivación es demostrar el teorema de Lagrange
+\section*{Fracciones continuadas simples}
+    
+    Notación
+    
+    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de enteros $\{h_n\}$ y $\{k_n}\$ del modo siguiente 
+    
+        \[
+        h_2=0, \qquad h_1 =1, \qquad h_i=a_ih_{i-1} + h_{i-2} \qquad \textnormal{para } i\geq 0
+        \]
+        \[
+        k_2=0, \qquad k_1 =1, \qquad k_i=a_ik_{i-1} + k_{i-2} \qquad \textnormal{para } i\geq 0
+        \]
+    
+    \textbf{Teorema 1} Para cualquier número real positivo $x$,
+        \[
+        [a_0,a_1,...,a_{n-1}]=\dfrac{xh_{n-1}+h_{n-2}}{xk_{n-1}+k_{n-2}}
+        \]
+        
+    Demostración. procedamos por inducción, si $n=0$, el resultado obtenemos lo siguiente
+        \[
+        x=\dfrac{xh_{n-1}+h_{n-2}}{xk_{n-1}+k_{n-2}}
+        \]
+        
+    Lo cual es verdadero con base en las sucesiones anteriormente definidas, ahora supongamos que el resultado se cumple para $[a_0,a_1,...,a_{n-1},x]$ entonces $[a_0,a_1,...,a_n,x]=[a_0,a_1,...,a_{n-1},a_n + 1/x]$ y por hipótesis de inducción
+    
+        \[
+        [a_0,a_1,...,a_{n-1},a_n + \dfrac{1}{x}]
+            =\dfrac{(a_n+1/x)h_{n-1}+h_{n-2}}{(a_n+1/x)k_{n-1}+k_{n-2}}
+            \]
+            \[
+            =\dfrac{x(a_nh_{n-1}+h_{n-2})+h_{n-1}}{x(a_nk_{n-1}+k_{n-2})+k_{n-1}}
+            \]
+            \[
+            =\dfrac{xh_n+h_{n-1}}{xk_n+k_{n-1}}
+        \]
+        
+    \textbf{Definición} Se define $r_n=[a_0,a_1,..,a_n]$
+    
+    \textbf{Observación} Para todos los enteros $n \geq 0$, se tiene $r_n=h_n/k_n$
+    
+    Demostración. Aplicando el teorema 1 tenemos
+    \[
+    r_n=[a_0,a_1,...,a_n]=\dfrac{a_nh_{n-1}+h_{n-2}}{a_nk_{n-1}+k_{n-2}}=\dfrac{h_n}{k_n}
+    \]
+    
+    \textbf{Definición}  Una sucesión infinita $a_0, a_1, a_2,...$ de enteros positivos exepto tal vez $a_0$, determina una fracción continuada simple infinita $[a_0, a_1, ..., ]$. El valor de $[a_0, a_1, ..., ]$ está definido como $\lim_{n\to\infty}[a_0, a_1, ..., a_n]$.
+    
+    Otra forma de escribir este limite es $\lim_{n\to\infty}h_n/k_n$. EL número racional $[a_0, a_1, ...,a_n]=h_n/k_n=r_n$ se llama el $n-$ésimo convergente se dice que la fracción continuada converge al valor $\lim_{n\to\infty}r_n$.
+
+    \subsection*{Fracciones continuadas periodicas}
+    
+    \textbf{Definición} Se dice que una fracción continuada simple infinita $[a_0,a_1,...]$ es periódica si existe un entero $n$ tal que $a_r=a_{n+r}$, para todos los enteros $r$ suficientemente grandes.
+    
+    Por lo tanto una fracción continuada periódica $\xi$ puede escribirse de la siguiente forma
+        \[\xi=
+        [a_0,a_1,a_2,...,a_j,b_0,b_1,...,b_{n-1},b_0,b_1,..,b_{n-1},b_{0},...]=
+        \]
+        \[
+        [a_0,a_1,a_2,...,a_j,\overline{b_0,b_1,...,b_{n-1}}]=
+        \]
+    
+    Notemos que por el teorema 1 podemos escribir el valor de una fracción continuda simple $\xi$ como 
+    \[
+    \xi=[a_0,a_1,...,a_{n-1},\xi_n]=\dfrac{\xi_n h_{n-1} + h_{n-2}}{\xi_n k_{n-1} + k_{n-2}}
+    \]
+    
+    donde $\xi_n=\overline{[b_0,b_1,..,b_{n-1}]}$
+    
+    \textbf{Observación} El valor de cualquier fracción continuada simple infinita es irracional
+    Supongamos que el valor es un racional, podemos escribirlo como una fracción continuada finita, y por la unicidad de las fracciones continuas, (recordemos que solo se pueden escribir de dos maneras difernetes)  estas son esencialmente diferentes por lo que el valor es irracional
 
     \textbf{Teorema de Lagrange} Sea $\alpha \in \mathbb{R}$. La fraccion continuada de $\alpha$ es periodica si y solo si existen $a, b, c \in\mathbb{Z}$ con $a\not=0$ tales que $a\alpha^2 + b\alpha + c = 0$.
 
-    Empecemos suponiendo que $\alpha$ es una fracción continuada periódica, de lo cual $\alpha= [a_0,a_1,...,a_{j,\theta}]$, donde $\theta=\overline{[b_0,b_1,..,b_{n-1}]}$, por la ecuación (7.8) se sigue que
+    Empecemos suponiendo que $\alpha$ es una fracción continuada periódica, de lo cual $\alpha= [a_0,a_1,...,a_{j,\theta}]$, donde $\theta=\overline{[b_0,b_1,..,b_{n-1}]}$, se sigue que
         \[
         \theta =\dfrac{\theta h_{n-1}+h_{n-2}}{\theta k_{n-1}+k_{n-2}}
         \]
-    y esta es una ecuación cuadrática en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional pero el valor de cualquier fracción continuada simple infinita es irracional(dem), ahora $\alpha$ puede escribirse como 
+    y esta es una ecuación cuadrática en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional pero el valor de cualquier fracción continuada simple infinita es irracional, ahora $\alpha$ puede escribirse como 
         \[
         \alpha = [a_0,a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'}
         \]
@@ -55,7 +123,7 @@
 
     Ahora supongamos que $\alpha$ es irracional cuadrático, entonces es de la forma $\alpha=(a+\sqrt{b})/c$, con los enteros $a,b,c,d>0$, $c\not=0$, el entero $b$ no es un cuadrado perfecto puesto que $\alpha$ es irracional. Multiplequemos el numerador y el denominador por $|c|$ para obtener 
         \[
-        \alpha = \dfrac{ac + \sqrt{bc^2}}{c^2} \textnormal{o bien } \alpha=\dfrac{-ac+\sqrt{bc^2}}{-x^2}
+        \alpha = \dfrac{ac + \sqrt{bc^2}}{c^2} \textnormal{o bien } \alpha=\dfrac{-ac+\sqrt{bc^2}}{-c^2}
         \]
     de acuerdo con que $c$ sea positiva o negativa. Así puede escribirse $\alpha$ de la forma
         \[
