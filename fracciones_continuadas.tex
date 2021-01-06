@@ -34,15 +34,36 @@
 \renewcommand{\baselinestretch}{1.5}
 
 \begin{document}
-\maketitle
-\thispagestyle{empty}
+
+    \begin{center}
+    {\scshape\LARGE Universidad Nacional Autónoma de México \par}
+
+    \vspace{1cm}
+    {\scshape\Large Facultad de Ciencias\par}
+    \vspace{1.5cm}
+
+    \begin{center}
+        \includegraphics[scale=.1]{./assets/logo.png}
+    \end{center}
+
+    
+    \vspace{0.5cm}
+    \large{\itshape{Jorge Vasquez Arriaga}} \small{ - 419004633} \\ \vspace{0.3cm}
+    \large{\itshape{Ricardo Olalde Gómez}} \small{ - 315317987} \\ \vspace{0.3cm}
+    
+    \vspace{.8 cm}
+
+    {\LARGE \textbf{Fracciones Continuadas} \par}
+    \end{center}
+
+
 \section*{Introducción}
     Las fracciones continuadas tienen su comienzo como...
 \section*{Fracciones continuadas simples}
     
     Notación
     
-    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de enteros $\{h_n\}$ y $\{k_n}\$ del modo siguiente 
+    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de enteros $\{h_n\}_{n\in\mathbb{N}}$ y $\{k_n\}_{n\in\mathbb{N}}$ del modo siguiente 
     
         \[
         h_2=0, \qquad h_1 =1, \qquad h_i=a_ih_{i-1} + h_{i-2} \qquad \textnormal{para } i\geq 0
@@ -85,7 +106,15 @@
     
     \textbf{Definición}  Una sucesión infinita $a_0, a_1, a_2,...$ de enteros positivos exepto tal vez $a_0$, determina una fracción continuada simple infinita $[a_0, a_1, ..., ]$. El valor de $[a_0, a_1, ..., ]$ está definido como $\lim_{n\to\infty}[a_0, a_1, ..., a_n]$.
     
-    Otra forma de escribir este limite es $\lim_{n\to\infty}h_n/k_n$. EL número racional $[a_0, a_1, ...,a_n]=h_n/k_n=r_n$ se llama el $n-$ésimo convergente se dice que la fracción continuada converge al valor $\lim_{n\to\infty}r_n$.
+    Otra forma de escribir este limite es $\lim_{n\to\infty} h_n/k_n$. EL número racional $[a_0, a_1, ...,a_n]=h_n/k_n=r_n$ se llama el $n-$ésimo convergente se dice que la fracción continuada converge al valor $\lim_{n\to\infty}r_n$.
+    
+    Para desarrollar una fracción continuada $\xi$ simple infinita, definimos $a_0=\lfloor \xi_0 \rfloor$, $[\xi_1]=1/(\xi-a_0)$ y en seguida $a_1= \lfloor \xi_1 \rfloor, \xi_2=1/(\xi_1-a_1)$, y así mediante una función inductiva tenemos
+        \begin{equation}
+        a_i=\lfloor \xi_i \rfloor, \qquad \xi_{i+1}=\dfrac{1}{\xi_i-a_i}
+        \label{ecuacion_1}
+        \end{equation}
+
+    Por definición todos los $a_i$ son enteros y los $\xi_i$ son todos irracionales puesto que la irracionalidad de $\xi_1$ es consecuencia de $\xi$, la de $\xi_2$ es consecuencia de la de $x_2$, y así sucesivamente.
 
     \subsection*{Fracciones continuadas periodicas}
     
@@ -93,10 +122,10 @@
     
     Por lo tanto una fracción continuada periódica $\xi$ puede escribirse de la siguiente forma
         \[\xi=
-        [a_0,a_1,a_2,...,a_j,b_0,b_1,...,b_{n-1},b_0,b_1,..,b_{n-1},b_{0},...]=
+        [a_0,a_1,a_2,...,a_j,b_0,b_1,...,b_{n-1},b_0,b_1,..,b_{n-1},b_{0},...]
         \]
         \[
-        [a_0,a_1,a_2,...,a_j,\overline{b_0,b_1,...,b_{n-1}}]=
+        =[a_0,a_1,a_2,...,a_j,\overline{b_0,b_1,...,b_{n-1}}]
         \]
     
     Notemos que por el teorema 1 podemos escribir el valor de una fracción continuda simple $\xi$ como 
@@ -107,7 +136,10 @@
     donde $\xi_n=\overline{[b_0,b_1,..,b_{n-1}]}$
     
     \textbf{Observación} El valor de cualquier fracción continuada simple infinita es irracional
-    Supongamos que el valor es un racional, podemos escribirlo como una fracción continuada finita, y por la unicidad de las fracciones continuas, (recordemos que solo se pueden escribir de dos maneras difernetes)  estas son esencialmente diferentes por lo que el valor es irracional
+    
+    Demostración: Supongamos que el valor es un racional, podemos escribirlo como una fracción continuada finita, y por la unicidad de las fracciones continuas, (recordemos que solo se pueden escribir de dos maneras difernetes)  estas son diferentes, por lo que el valor es irracional
+    
+    
 
     \textbf{Teorema de Lagrange} Sea $\alpha \in \mathbb{R}$. La fraccion continuada de $\alpha$ es periodica si y solo si existen $a, b, c \in\mathbb{Z}$ con $a\not=0$ tales que $a\alpha^2 + b\alpha + c = 0$.
 
@@ -130,51 +162,60 @@
         \alpha = \dfrac{m_0+\sqrt{d}}{q_0}
         \]
     donde $q_0|(d-m_0^2)$, $d,m_0$ y $q$ son enteros, $q_0\not=0$, $d$ no es un entero cuadrado perfecto. Escribiendo $\alpha$ en esta forma podemos obtener una formulación sencilla de su desarrlo fraccionario continuado $\overline{[a_0,a_1,...]}$ . Se probara que las siguientes ecuaciones 
-        \[
-        a_i=[\alpha_i], \qquad \alpha_i=\dfrac{m_i+\sqrt{d}}{q_i},
-        \]
+
+        \begin{equation}
+        a_i= \lfloor \alpha_i \rfloor, \qquad \alpha_i=\dfrac{m_i+\sqrt{d}}{q_i}, \label{prueba_ecuacion}
+        \end{equation}
+        
         \[
         m_{i+1}=a_iq_i-m_i, \qquad q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}
-        \]
-    definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(7.7)dem$ y de donde se obtendra el desarrollo continuado de $\alpha$
+        \] 
+    definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(\ref{ecuacion_1})$ y de donde se obtendra el desarrollo continuado de $\alpha$
 
-    En primer lugar, empecemos con $\alpha_0,m_0,q_0$ tal y cimo se determinaron anteriormente  y hagmaos $a_0=[\alpha_0]$. Si se conocen $\alpha_i,m_i,q_i,a_i$, entonces se tiene que $m_{i+1}=a_iq_i - m_i$, $q_i=(d-m_{i+q}^2)/q_i, \alpha_{i+1}=(m_{i+1} + \sqrt{d})/q_{i+1}, a_i=[\alpha_{i+1}]$. Es decir las ecuaciones anteriore $(poner numero)$ realmente determinan las sucesiones $\alpha_i,m_i,q_i,a_i$ que son por lo menos reales.
+    En primer lugar, empecemos con $\alpha_0,m_0,q_0$ tal y como se determinaron anteriormente  y hagmaos $a_0=[\alpha_0]$. Si se conocen $\alpha_i,m_i,q_i,a_i$, entonces se tiene que 
+        \[
+         m_{i+1}=a_iq_i - m_i, q_i=(d-m_{i+q}^2)/q_i, \alpha_{i+1}=(m_{i+1} + \sqrt{d})/q_{i+1}, a_i=[\alpha_{i+1}].
+         \]
     
-    Ahora se aplica inducción para probar que los $m_i$ y los $q_i$son enteros tales que $q_i\not=0$ y $q_i|(d-m^2)$. Esto se cumple para $i=0$. Supongamos que es cierto para el $i-$ésimo paso enttonces, se observa que $m_{i+1}=a_iq_i-m_i$ es n entero.Entonces la ecuación 
+    Es decir las ecuaciones anteriores (\ref{prueba_ecuacion}), realmente determinan las sucesiones $\alpha_i,m_i,q_i,a_i$ que son por lo menos reales.
+    
+    Ahora se aplica inducción para probar que los $m_i$ y los $q_i$son enteros tales que $q_i\not=0$ y $q_i|(d-m^2)$. Esto se cumple para $i=0$. Supongamos que es cierto para el $i-$ésimo paso enttonces, se observa que $m_{i+1}=a_iq_i-m_i$ es n entero. Entonces la ecuación 
          \[
         q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}=\dfrac{d-m_i^2}{q_i} + 2a_im_i-a_i^2q_i
         \]
-    establece que $q_{i+1}$ es un entero. Es más $q_i+1$ no puede ser cero, dado que si lo fuera, se tendría $d=m^2_{i+1}$, pero $d$ no es un cuadrado perfecto. Finalmente, se tiene que $q_i=(d-m_{i+1}^2)/q_{i+1}$, de modo que $q_{i+1}|(d-m_{i+1}^2)$
+    establece que $q_{i+1}$ es un entero. Es más $q_{i+1}$ no puede ser cero, dado que si lo fuera, se tendría $d=m^2_{i+1}$, pero $d$ no es un cuadrado perfecto. Finalmente, se tiene que $q_i=(d-m_{i+1}^2)/q_{i+1}$, de modo que $q_{i+1}|(d-m_{i+1}^2)$
     
     A continuación puede verificarse que 
         \[
         \alpha_i-a_i=\dfrac{-a_iq_i+m_i+\sqrt{d}}{q_i}=\dfrac{\sqrt{d}-m_{i+1}}{q_i}=\dfrac{d-m_{i+1}^2}{q_i(\sqrt{d}+m_{i+1})}=\dfrac{q_i+1}{\sqrt{d}+m_{i+1}}=\dfrac{1}{\alpha_{i+1}}
         \]
-    lo cual verifica $(7.7)dem$ y así se ha probado que $\alpha=[a_0,a_1,a_2,...]$, con los $a_i$ definidos por las ecuaciones $nombrarlas$ 
+    lo cual verifica $(\ref{ecuacion_1})$ y así se ha probado que $\alpha=[a_0,a_1,a_2,...]$, con los $a_i$ definidos por las ecuaciones $nombrarlas$ 
     
     Mediante $\alpha^{'}_{i}$ denotamos el conjunto de $\alpha_i$ esto es $\alpha^{'}_{i}=(m_i-\sqrt{d})/q_i$. Dado que el conjunto de un cociente es igual al cociente de lo conjufado se obtiene la ecuación
         \[
         \alpha_0{'}=\dfrac{\alpha_n^{'}h_{n-1}+h_{n-2}}{\alpha_n^{'}k_{n-1}+k_{n-2}}
         \]
-    tomando los conjugado en $?(7.8)$y resolviendo para $\alpha_n^{'}$ se tiene
+    tomando los conjugados en $?(7.8)$y resolviendo para $\alpha_n^{'}$ se tiene
         \[
         \alpha_n^{'}=-\dfrac{k_{n-2}}{k_{n-1}}\left(\dfrac{\alpha_0^{'}-h_{n-2}/k_{n-2}}{\alpha_0^{'}-h_{n-1}/k_{n-1}}\right)
         \]
         
     Conforme $n$ tiende al infinito, tanto $h_{n-1}/k_{n-1}$ como $h_{m-2}/k_{n-2}$ tienden hacia $\alpha_0^{'}$ y por tanto la fracción que se encuentra dentro del paréntesis tiende a 1. Así que para un $n$ lo suficientemente grande, digamos $n>N$, 
     donde $N$ es fijo, la fracción del paréntesis es positiva y $\alpha_n^{'}$ es negativo, pero recordemos que $\alpha_n^{'}$ es positivo para toda
-    $n\geq 1$ y de aqí que $\alpha_n - \alpha_n^{'}>0$ para $n>N$. Aplicando (7.16) se ve que da $2 \sqrt{d}/q_{n} >0$
+    $n\geq 1$ y de aqí que $\alpha_n - \alpha_n^{'}>0$ para $n>N$. Aplicando (\ref{prueba_ecuacion}), obtenemos $2 \sqrt{d}/q_{n} >0$
     de aquí que $q_n>0$ para $n>N$.
     
-    De (7.16) también se deduce que 
+    De (\ref{prueba_ecuacion}), también se deduce que 
         \[
         q_nq_{n+1}=d-m^2_{n+1}\leq d, \qquad q_n\leq q_nq_{n+1}\leq d 
         \]
         \[
         m^2_{n+1} < m_{n+1}^2+q_n q_n+1=d, \qquad |m_{n+1}|<\sqrt{d}
         \]
-    para $n>N$. Supuesto de que $d$ es un enttero positivo fijo se concluye que $q_n$ y $m_{n+1}$ pueden saumir un solo numero fijo de valores posibes para $q_n$ y $m_{n+1}$ pueden asumir sólo un número fijo de valores posibles para $n>N$. De aquñi que las parejas ordenadas $(m_n,q_n)$ pueden asumir sólo un número fijo de valores posibles de la parejas para $n>N$, y por tanto existen enteros distints $j$ y $k$ tales que $m_j=m_k$ y $q_j=q_k$, pueden suponerse que se han escogido $j$ y $k$ tales que $j<k$. Por (7.16), esto implica que $\alpha_j=\alpha_k$ y de aquí que
+    para $n>N$. Supuesto de que $d$ es un enttero positivo fijo se concluye que $q_n$ y $m_{n+1}$ pueden saumir un solo numero fijo de valores posibes para $q_n$ y $m_{n+1}$ pueden asumir sólo un número fijo de valores posibles para $n>N$. De aquñi que las parejas ordenadas $(m_n,q_n)$ pueden asumir sólo un número fijo de valores posibles de la parejas para $n>N$, y por tanto existen enteros distints $j$ y $k$ tales que $m_j=m_k$ y $q_j=q_k$, pueden suponerse que se han escogido $j$ y $k$ tales que $j<k$. Por (\ref{prueba_ecuacion}), esto implica que $\alpha_j=\alpha_k$ y de aquí que
         \[
         \alpha=[a_0,a_1,...,a_{j-1},\overline{a_j,a_{j+1},...,a_{k-1}}]
         \]
+    
+    \section*{Aplicaciones de las Fracciones Continuadas}
 \end{document}
