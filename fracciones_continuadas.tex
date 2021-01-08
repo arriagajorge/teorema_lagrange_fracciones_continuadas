@@ -36,22 +36,12 @@
 \begin{document}
 
     \begin{center}
-    {\scshape\LARGE Universidad Nacional Autónoma de México \par}
+    {\scshape\LARGE Análisis Matemático \par}
 
-    \vspace{1cm}
-    {\scshape\Large Facultad de Ciencias\par}
-    \vspace{1.5cm}
-
-    \begin{center}
-        \includegraphics[scale=.1]{./assets/logo.png}
-    \end{center}
-
-    
     \vspace{0.5cm}
-    \large{\itshape{Jorge Vasquez Arriaga}} \small{ - 419004633} \\ \vspace{0.3cm}
-    \large{\itshape{Ricardo Olalde Gómez}} \small{ - 315317987} \\ \vspace{0.3cm}
-    
-    \vspace{.8 cm}
+    \large{\itshape{Manuel Avila Guerrero}}  \\ 
+    \large{\itshape{Jonathan Lopez Ruiz}}  \\
+    \large{\itshape{Jorge Vasquez Arriaga}} \\
 
     {\LARGE \textbf{Fracciones Continuadas} \par}
     \end{center}
@@ -77,16 +67,16 @@
     
     Una expresión de la forma 
     \[
-    a_1 + \dfrac{b_1}{a_2+ \dfrac{b_2}{a_3+\dfrac{b_3}{a_4+...}}} 
+    a_0 + \dfrac{b_0}{a_1+ \dfrac{b_2}{a_2+\dfrac{b_2}{a_3+...}}} 
     \]
-    es llamada fracción continuada en general $a_1,a_2,a_3,...$ y $b_1,b_2,b_3,...$ son numeros reales o complejos y el número de terminos puede ser tanto finito o infinito, si $1=b_1=b_2=b_3=...$ y cada $a_i$ es un entero positivo, para $i$ en los enteros positivos, entonces diremos que es una fracción continuada simple.
+    es llamada fracción continuada en general $a_0, a_1,a_2,...$ y $b_0, b_1,b_2,...$ son numeros reales o complejos y el número de terminos puede ser tanto finito o infinito, si $1=b_0=b_1=b_2=...$ y cada $a_i$ es un entero positivo, para $i$ en los enteros positivos, entonces diremos que es una fracción continuada simple.
     
     \textbf{Notación} Usaremos la expresión $[a_0,a_1,a_2, \dots]$ para designar a la fracción continuada simple.
     
 \section*{Fracciones continuadas simples}
     
     
-    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de enteros $\{h_n\}_{n\in\mathbb{N}}$ y $\{k_n\}_{n\in\mathbb{N}}$ del modo siguiente 
+    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de naturales $\{h_n\}_{n\in\mathbb{N}}$ y $\{k_n\}_{n\in\mathbb{N}}$ del modo siguiente 
     
         \[
         h_2=0, \qquad h_1 =1, \qquad h_i=a_ih_{i-1} + h_{i-2} \qquad \textnormal{para } i\geq 0
@@ -175,7 +165,7 @@
         \[
         \alpha = [a_0,a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'}
         \]
-    donde $m'/q'$ y $m/q$ son los dos últimos convergentes para $[a_0,a_1,...,a_j]$, pero $\theta$ es de la forma $(a + \sqrt{b})/c$ y de aquí $\alpha$ es de forma semejante, debido a que como con $\theta$ puede excluirse la posibilidad de que $\alpha$ sea racional
+    donde $m'/q'$ y $m/q$ son los dos últimos convergentes para $[a_0,a_1,...,a_j]$, pero $\theta$ es de la forma $(a + \sqrt{b})/c$ y de aquí $\alpha$ es de forma semejante, debido a que como con $\theta$ puede excluirse la posibilidad de que $\alpha$ sea racional.
 
     Ahora supongamos que $\alpha$ es irracional cuadrático, entonces es de la forma $\alpha=(a+\sqrt{b})/c$, con los enteros $a,b,c,d>0$, $c\not=0$, el entero $b$ no es un cuadrado perfecto puesto que $\alpha$ es irracional. Multiplequemos el numerador y el denominador por $|c|$ para obtener 
         \[
@@ -194,7 +184,7 @@
         \[
         m_{i+1}=a_iq_i-m_i, \qquad q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}
         \] 
-    definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(\ref{ecuacion_1})$ y de donde se obtendra el desarrollo continuado de $\alpha$
+    definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(\ref{ecuacion_1})$ y de donde se obtendra el desarrollo continuado de $\alpha$.
 
     En primer lugar, empecemos con $\alpha_0,m_0,q_0$ tal y como se determinaron anteriormente  y hagmaos $a_0=[\alpha_0]$. Si se conocen $\alpha_i,m_i,q_i,a_i$, entonces se tiene que 
         \[
@@ -256,5 +246,23 @@
      \[
      x_0 = (-1)^{n-1} (h_{n-1})c, \qquad y_0=(-1)^n (k_{n-1})c
      \]
+     
+     \section*{Glosario de simbología}
+     
+     $(a,b)$ : máximo comun divisor entre a y b
+     
+     $\lfloor x \rfloor$ : función parte entrera o función piso
+     
+     
+     $\mathbb{Z}$ : los números enteros
+     
+     
+     \section*{Referencias bibliográficas}
+     Ivan Niven, Herbert S. Zuckerman, Hugh L. Montgomery, An \textit{Introduction to the theory of numbers}, Wiley, 1991
+     
+     Joseph H. Silverman, \textit{A friendly introduction to number theory}, Pearson, 2012
+     
+     C. D Olds, \textit{Continued fractions}, New mathematical library, Random House, 1963
+     
      
 \end{document}
