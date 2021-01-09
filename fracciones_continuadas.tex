@@ -40,7 +40,7 @@
 
     \vspace{0.5cm}
     \large{\itshape{Manuel Avila Guerrero}}  \\ 
-    \large{\itshape{Jonathan Lopez Ruiz}}  \\
+    \large{\itshape{Jonathan López Ruiz}}  \\
     \large{\itshape{Jorge Vasquez Arriaga}} \\
 
     {\LARGE \textbf{Fracciones Continuadas} \par}
@@ -62,7 +62,7 @@
     \]
     repitiendo este proceso obtenemos
     \[
-    x=3+\dfrac{1}{3 + \dfrac{1}{3 + \dfrac{1}{3 + ... + \dfrac{1}{x}}}}
+    x=3+\dfrac{1}{3 + \dfrac{1}{3 + \dfrac{1}{3 + ... + \dfrac{1}{x}}}}.
     \]
     
     Una expresión de la forma 
@@ -76,26 +76,25 @@
 \section*{Fracciones continuadas simples}
     
     
-    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de naturales $\{h_n\}_{n\in\mathbb{N}}$ y $\{k_n\}_{n\in\mathbb{N}}$ del modo siguiente 
+    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de naturales $\{h_n\}_{n\in\mathbb{N}}$ y $\{k_n\}_{n\in\mathbb{N}}$ del modo siguiente,
     
         \[
         h_2=0, \qquad h_1 =1, \qquad h_i=a_ih_{i-1} + h_{i-2} \qquad \textnormal{para } i\geq 0
         \]
         \[
-        k_2=0, \qquad k_1 =1, \qquad k_i=a_ik_{i-1} + k_{i-2} \qquad \textnormal{para } i\geq 0
+        k_2=0, \qquad k_1 =1, \qquad k_i=a_ik_{i-1} + k_{i-2} \qquad \textnormal{para } i\geq 0.
         \]
     
     \textbf{Teorema 1} Para cualquier número real positivo $x$,
         \[
-        [a_0,a_1,...,a_{n-1}]=\dfrac{xh_{n-1}+h_{n-2}}{xk_{n-1}+k_{n-2}}
+        [a_0,a_1,...,a_{n-1}]=\dfrac{xh_{n-1}+h_{n-2}}{xk_{n-1}+k_{n-2}}.
         \]
         
     Demostración. procedamos por inducción, si $n=0$, el resultado obtenemos lo siguiente
         \[
         x=\dfrac{xh_{n-1}+h_{n-2}}{xk_{n-1}+k_{n-2}}
         \]
-        
-    Lo cual es verdadero con base en las sucesiones anteriormente definidas, ahora supongamos que el resultado se cumple para $[a_0,a_1,...,a_{n-1},x]$ entonces $[a_0,a_1,...,a_n,x]=[a_0,a_1,...,a_{n-1},a_n + 1/x]$ y por hipótesis de inducción
+        lo cual es verdadero con base en las sucesiones anteriormente definidas, ahora supongamos que el resultado se cumple para $[a_0,a_1,...,a_{n-1},x]$ entonces $[a_0,a_1,...,a_n,x]=[a_0,a_1,...,a_{n-1},a_n + 1/x]$ y por hipótesis de inducción
     
         \[
         [a_0,a_1,...,a_{n-1},a_n + \dfrac{1}{x}]
@@ -105,16 +104,16 @@
             =\dfrac{x(a_nh_{n-1}+h_{n-2})+h_{n-1}}{x(a_nk_{n-1}+k_{n-2})+k_{n-1}}
             \]
             \[
-            =\dfrac{xh_n+h_{n-1}}{xk_n+k_{n-1}}
+            =\dfrac{xh_n+h_{n-1}}{xk_n+k_{n-1}}.
         \]
         
-    \textbf{Definición} Se define $r_n=[a_0,a_1,..,a_n]$
+    \textbf{Definición} Se define $r_n=[a_0,a_1,..,a_n]$.
     
-    \textbf{Observación} Para todos los enteros $n \geq 0$, se tiene $r_n=h_n/k_n$
+    \textbf{Observación} Para todos los enteros $n \geq 0$, se tiene $r_n=h_n/k_n$.
     
     Demostración. Aplicando el teorema 1 tenemos
     \[
-    r_n=[a_0,a_1,...,a_n]=\dfrac{a_nh_{n-1}+h_{n-2}}{a_nk_{n-1}+k_{n-2}}=\dfrac{h_n}{k_n}
+    r_n=[a_0,a_1,...,a_n]=\dfrac{a_nh_{n-1}+h_{n-2}}{a_nk_{n-1}+k_{n-2}}=\dfrac{h_n}{k_n}.
     \]
     
     \textbf{Definición}  Una sucesión infinita $a_0, a_1, a_2,...$ de enteros positivos exepto tal vez $a_0$, determina una fracción continuada simple infinita $[a_0, a_1, ..., ]$. El valor de $[a_0, a_1, ..., ]$ está definido como $\lim_{n\to\infty}[a_0, a_1, ..., a_n]$.
@@ -123,7 +122,7 @@
     
     Para desarrollar una fracción continuada $\xi$ simple infinita, definimos $a_0=\lfloor \xi_0 \rfloor$, $[\xi_1]=1/(\xi-a_0)$ y en seguida $a_1= \lfloor \xi_1 \rfloor, \xi_2=1/(\xi_1-a_1)$, y así mediante una función inductiva tenemos
         \begin{equation}
-        a_i=\lfloor \xi_i \rfloor, \qquad \xi_{i+1}=\dfrac{1}{\xi_i-a_i}
+        a_i=\lfloor \xi_i \rfloor, \qquad \xi_{i+1}=\dfrac{1}{\xi_i-a_i}.
         \label{ecuacion_1}
         \end{equation}
 
@@ -138,7 +137,7 @@
         [a_0,a_1,a_2,...,a_j,b_0,b_1,...,b_{n-1},b_0,b_1,..,b_{n-1},b_{0},...]
         \]
         \[
-        =[a_0,a_1,a_2,...,a_j,\overline{b_0,b_1,...,b_{n-1}}]
+        =[a_0,a_1,a_2,...,a_j,\overline{b_0,b_1,...,b_{n-1}}].
         \]
     
     Notemos que por el teorema 1 podemos escribir el valor de una fracción continuda simple $\xi$ como 
@@ -146,12 +145,11 @@
     \begin{equation}
     \xi=[a_0,a_1,...,a_{n-1},\xi_n]=\dfrac{\xi_n h_{n-1} + h_{n-2}}{\xi_n k_{n-1} + k_{n-2}}  \label{ecuacion_8}
     \end{equation}
+    donde $\xi_n=\overline{[b_0,b_1,..,b_{n-1}]}$.
     
-    donde $\xi_n=\overline{[b_0,b_1,..,b_{n-1}]}$
+    \textbf{Observación} El valor de cualquier fracción continuada simple infinita es irracional.
     
-    \textbf{Observación} El valor de cualquier fracción continuada simple infinita es irracional
-    
-    Demostración: Supongamos que el valor es un racional, podemos escribirlo como una fracción continuada finita, y por la unicidad de las fracciones continuas, (recordemos que solo se pueden escribir de dos maneras difernetes)  estas son diferentes, por lo que el valor es irracional
+    Demostración: Supongamos que el valor es un racional, entonces podemos escribirlo como una fracción continuada finita, y por la unicidad de las fracciones continuas, (recordemos que solo se pueden escribir de dos maneras difernetes)  estas son diferentes, por lo que el valor es irracional.
     
     
 
@@ -180,7 +178,6 @@
         \begin{equation}
         a_i= \lfloor \alpha_i \rfloor, \qquad \alpha_i=\dfrac{m_i+\sqrt{d}}{q_i}, \label{prueba_ecuacion}
         \end{equation}
-        
         \[
         m_{i+1}=a_iq_i-m_i, \qquad q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}
         \] 
@@ -193,17 +190,17 @@
     
     Es decir las ecuaciones anteriores (\ref{prueba_ecuacion}), realmente determinan las sucesiones $\alpha_i,m_i,q_i,a_i$ que son por lo menos reales.
     
-    Ahora se aplica inducción para probar que los $m_i$ y los $q_i$son enteros tales que $q_i\not=0$ y $q_i|(d-m^2)$. Esto se cumple para $i=0$. Supongamos que es cierto para el $i-$ésimo paso enttonces, se observa que $m_{i+1}=a_iq_i-m_i$ es n entero. Entonces la ecuación 
+    Ahora se aplica inducción para probar que los $m_i$ y los $q_i$ son enteros tales que $q_i\not=0$ y $q_i|(d-m^2)$. Esto se cumple para $i=0$. Supongamos que es cierto para el $i-$ésimo paso enttonces, se observa que $m_{i+1}=a_iq_i-m_i$ es n entero. Entonces la ecuación 
          \[
         q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}=\dfrac{d-m_i^2}{q_i} + 2a_im_i-a_i^2q_i
         \]
-    establece que $q_{i+1}$ es un entero. Es más $q_{i+1}$ no puede ser cero, dado que si lo fuera, se tendría $d=m^2_{i+1}$, pero $d$ no es un cuadrado perfecto. Finalmente, se tiene que $q_i=(d-m_{i+1}^2)/q_{i+1}$, de modo que $q_{i+1}|(d-m_{i+1}^2)$
+    establece que $q_{i+1}$ es un entero. Es más $q_{i+1}$ no puede ser cero, dado que si lo fuera, se tendría $d=m^2_{i+1}$, pero $d$ no es un cuadrado perfecto. Finalmente, se tiene que $q_i=(d-m_{i+1}^2)/q_{i+1}$, de modo que $q_{i+1}|(d-m_{i+1}^2)$.
     
     A continuación puede verificarse que 
         \[
         \alpha_i-a_i=\dfrac{-a_iq_i+m_i+\sqrt{d}}{q_i}=\dfrac{\sqrt{d}-m_{i+1}}{q_i}=\dfrac{d-m_{i+1}^2}{q_i(\sqrt{d}+m_{i+1})}=\dfrac{q_i+1}{\sqrt{d}+m_{i+1}}=\dfrac{1}{\alpha_{i+1}}
         \]
-    lo cual verifica $(\ref{ecuacion_1})$ y así se ha probado que $\alpha=[a_0,a_1,a_2,...]$, con los $a_i$ definidos por las ecuaciones ($\ref{prueba_ecuacion}$)
+    lo cual verifica $(\ref{ecuacion_1})$ y así se ha probado que $\alpha=[a_0,a_1,a_2,...]$, con los $a_i$ definidos por las ecuaciones ($\ref{prueba_ecuacion}$).
     
     Mediante $\alpha^{'}_{i}$ denotamos el conjunto de $\alpha_i$ esto es $\alpha^{'}_{i}=(m_i-\sqrt{d})/q_i$. Dado que el conjunto de un cociente es igual al cociente de lo conjufado se obtiene la ecuación
         \[
@@ -211,7 +208,7 @@
         \]
     tomando los conjugados en $(\ref{ecuacion_8})$ y resolviendo para $\alpha_n^{'}$ se tiene
         \[
-        \alpha_n^{'}=-\dfrac{k_{n-2}}{k_{n-1}}\left(\dfrac{\alpha_0^{'}-h_{n-2}/k_{n-2}}{\alpha_0^{'}-h_{n-1}/k_{n-1}}\right)
+        \alpha_n^{'}=-\dfrac{k_{n-2}}{k_{n-1}}\left(\dfrac{\alpha_0^{'}-h_{n-2}/k_{n-2}}{\alpha_0^{'}-h_{n-1}/k_{n-1}}\right).
         \]
         
     Conforme $n$ tiende al infinito, tanto $h_{n-1}/k_{n-1}$ como $h_{m-2}/k_{n-2}$ tienden hacia $\alpha_0^{'}$ y por tanto la fracción que se encuentra dentro del paréntesis tiende a 1. Así que para un $n$ lo suficientemente grande, digamos $n>N$, 
@@ -228,15 +225,15 @@
         \]
     para $n>N$. Supuesto de que $d$ es un enttero positivo fijo se concluye que $q_n$ y $m_{n+1}$ pueden saumir un solo numero fijo de valores posibes para $q_n$ y $m_{n+1}$ pueden asumir sólo un número fijo de valores posibles para $n>N$. De aquñi que las parejas ordenadas $(m_n,q_n)$ pueden asumir sólo un número fijo de valores posibles de la parejas para $n>N$, y por tanto existen enteros distints $j$ y $k$ tales que $m_j=m_k$ y $q_j=q_k$, pueden suponerse que se han escogido $j$ y $k$ tales que $j<k$. Por (\ref{prueba_ecuacion}), esto implica que $\alpha_j=\alpha_k$ y de aquí que
         \[
-        \alpha=[a_0,a_1,...,a_{j-1},\overline{a_j,a_{j+1},...,a_{k-1}}]
+        \alpha=[a_0,a_1,...,a_{j-1},\overline{a_j,a_{j+1},...,a_{k-1}}].
         \]
     
     \section*{Aplicaciones de las Fracciones Continuadas}
-     A continuación presentamos algunas de las aplicaciones de las fracciones continuadas, primeramente son la mejor aproximación posibles a números irracionales y se puede ver a través del siguiente teorema
+     A continuación presentamos algunas de las aplicaciones de las fracciones continuadas, primeramente son la mejor aproximación posibles a números irracionales y se puede ver a través del siguiente teorema.
      
-     \textbf{Teorema 3} Si $\xi$ es un número irracional, $a/b$ es un número racional, con denomidador positivo tal que $|\xi - a/b|<|\xi-h_n/k_n|$ para algún $n\geq 1$, entonces $b>k_n$
+     \textbf{Teorema 3} Si $\xi$ es un número irracional, $a/b$ es un número racional, con denomidador positivo tal que $|\xi - a/b|<|\xi-h_n/k_n|$ para algún $n\geq 1$, entonces $b>k_n$.
      
-     tambien la teoria de las fracciones continuadas son usadas para resolver ecuaciones diofánticas, llamdas de Pell
+     tambien la teoria de las fracciones continuadas son usadas para resolver ecuaciones diofánticas, llamdas de Pell.
      
     \textbf{Teorema 4} La solución a la siguiente ecuación donde $a,b,c$ son enteros y 
      \[
@@ -244,25 +241,25 @@
      \] 
      es el par
      \[
-     x_0 = (-1)^{n-1} (h_{n-1})c, \qquad y_0=(-1)^n (k_{n-1})c
+     x_0 = (-1)^{n-1} (h_{n-1})c, \qquad y_0=(-1)^n (k_{n-1})c.
      \]
      
      \section*{Glosario de simbología}
      
-     $(a,b)$ : máximo comun divisor entre a y b
+     $(a,b)$ : máximo comun divisor entre a y b.
      
-     $\lfloor x \rfloor$ : función parte entrera o función piso
+     $\lfloor x \rfloor$ : parte entrera  de $x$ o función piso de $x$.
      
+     $|x|$ : valor absoluto de x
      
-     $\mathbb{Z}$ : los números enteros
+     $\mathbb{Z}$ : los números enteros.
      
      
      \section*{Referencias bibliográficas}
-     Ivan Niven, Herbert S. Zuckerman, Hugh L. Montgomery, An \textit{Introduction to the theory of numbers}, Wiley, 1991
+     Niven I., Zuckerman S. H., Montgomery L. H., \textit{An introduction to the theory of numbers}, Wiley, 1991.
+    
+      Olds C. D., \textit{Continued fractions}, New mathematical library, Random House, 1963.
      
-     Joseph H. Silverman, \textit{A friendly introduction to number theory}, Pearson, 2012
-     
-     C. D Olds, \textit{Continued fractions}, New mathematical library, Random House, 1963
-     
-     
+     Silverman H. Joseph, \textit{A friendly introduction to number theory}, Pearson, 2012.
+    
 \end{document}
