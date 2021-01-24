@@ -52,27 +52,28 @@
 
 
 \section*{Introducción}
-    $1 + \sqrt{5}/2=\Phi$, es un número que cumple $\Phi^2=\Phi + 1$, si dividimos por $\Phi$ obtenemos $\Phi=1+1/\Phi$, si sustituimos, la $\Phi$ del lado derecho obtenemos,  $\Phi = 1 + \dfrac{1}{1 + 1 /\Phi}$
+    El número áureo posee varias propiedades, es utilizado en proporciones, diseño, arquitectura e inclusive en la propia naturaleza, el valor del número áureo, $\Phi=(1 + \sqrt{5})/2$, es tal que  cumple $\Phi^2=\Phi + 1$, si dividimos por $\Phi$ obtenemos $\Phi=1+1/\Phi$, si sustituimos, la $\Phi$ del lado derecho obtenemos, 
+    
+    \[\Phi = 1 + \dfrac{1}{1 + \dfrac{1}{\Phi}},\]
 
     si reiteramos el proceso 
     \[
-    \Phi=1+\dfrac{1}{1+\dfrac{1}{1+\dots}}.
+        \Phi=1+\dfrac{1}{1+\dfrac{1}{1+\dots}}.
     \]
     
     Una expresión de la forma 
     \[
-    a_0 + \dfrac{b_0}{a_1+ \dfrac{b_1}{a_2\dots}} 
+        a_0 + \dfrac{b_0}{a_1+ \dfrac{b_1}{a_2+\dots}},
     \]
-    es llamada fracción continuada, en general $a_0, a_1,a_2,...$ y $b_0, b_1,b_2,...$ son numeros reales o complejos y el número de terminos puede ser tanto finito o infinito, si $1=b_0=b_1=b_2=...$ y cada $a_i$ es un entero positivo, para $i$ en los naturales, entonces diremos que es una fracción continuada simple.
+    es llamada fracción continuada, en general $a_0, a_1,a_2,...$ y $b_0, b_1,b_2,...$ son nuùmeros reales o complejos y el número de términos puede ser tanto finito o infinito, si $1=b_0=b_1=b_2=...$ y cada $a_i$ es un entero positivo, para $i$ en los naturales, entonces diremos que es una fracción continuada simple.
     
-    \textbf{Notación} Usaremos la expresión $[a_0,a_1,a_2, \dots]$ para designar a la fracción continuada simple.
+    \textbf{Notación.} \textit{Usaremos la expresión $[a_0;a_1,a_2, \dots]$ para designar a la fracción continuada simple.}
     
 \section*{Fracciones continuadas simples}
+    Consideraremos $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$, como dada.
     
     \begin{definition}
-    
-    
-    Sea $a_0,a_1,a_2...$ una sucesión infinita de enteros, todos positivos excepto tal vez $a_0$. Definimos inductivamente dos sucesiones de naturales $\{h_n\}_{n\geq 1}$ y $\{k_n\}_{n\geq 1}$ del modo siguiente,
+     Definimos inductivamente dos sucesiones de naturales $\{h_n\}_{n\geq 1}$ y $\{k_n\}_{n\geq 1}$ del modo siguiente,
         \[
         h_{-2}=0, \qquad h_{-1} =1, \qquad h_i=a_ih_{i-1} + h_{i-2} \qquad \textnormal{para } i\geq 0
         \]
@@ -80,27 +81,28 @@
         k_{-2}=1, \qquad k_{-1} =0, \qquad k_i=a_ik_{i-1} + k_{i-2} \qquad \textnormal{para } i\geq 0.
         \]
         \end{definition}
+        Observemos que las sucesiones $\{h_n\}_{n\geq 1}$ y $\{k_n\}_{n\geq 1}$, son crecientes pues están definidas recursivamente a través de suma y multiplicaciones.
         \begin{theorem}
         Para cualquier número real positivo $x$,
         \[
-        [a_0,a_1,...,a_{n-1}, x]=\dfrac{xh_{n-1}+h_{n-2}}{xk_{n-1}+k_{n-2}}. \label{teo1}
-        \] 
+        [a_0;a_1,...,a_{n-1}, x]=\dfrac{xh_{n-1}+h_{n-2}}{xk_{n-1}+k_{n-2}}. \label{teo1}
+        \]
         \end{theorem}
     \begin{proof} Procedamos por inducción. Si $n=0$
         \[
         x=\dfrac{xh_{-1}+h_{-2}}{xk_{-1}+k_{-2}}=\dfrac{x(1)+0}{x(0)+1}=x
         \]
         lo cual es verdadero. Ahora supongamos que el resultado se cumple para $[a_0,a_1,...,a_{n-1},x]$, entonces $[a_0,a_1,...,a_n,x]=[a_0,a_1,...,a_{n-1},a_n + 1/x]$ y por hipótesis de inducción
-    \begin{align*}
-        [a_0,a_1,...,a_{n-1},a_n + \dfrac{1}{x}]= 
-            \dfrac{(a_n+1/x)h_{n-1}+h_{n-2}}{(a_n+1/x)k_{n-1}+k_{n-2}}= \\
-            \dfrac{x(a_nh_{n-1}+h_{n-2})+h_{n-1}}{x(a_nk_{n-1}+k_{n-2})+k_{n-1}}= 
-            \dfrac{xh_n+h_{n-1}}{xk_n+k_{n-1}}\\
-    \end{align*}
+    \[
+        \left[a_0;a_1,...,a_{n-1},a_n + \dfrac{1}{x}\right] 
+        =  \dfrac{(a_n+1/x)h_{n-1}+h_{n-2}}{(a_n+1/x)k_{n-1}+k_{n-2}} 
+        = \dfrac{x(a_nh_{n-1}+h_{n-2})+h_{n-1}}{x(a_nk_{n-1}+k_{n-2})+k_{n-1}} 
+        = \dfrac{xh_n+h_{n-1}}{xk_n+k_{n-1}}
+    \]
     \end{proof}
     
     
-    \begin{definition} Se define $r_n=[a_0,a_1,..,a_n]$ para toda $n$ número natural
+    \begin{definition} Se define el convergente, $r_n=[a_0,a_1,..,a_n]$, para toda $n$ número natural
     \end{definition}
     
     \begin{theorem}
@@ -111,11 +113,11 @@
     \begin{proof}
         Aplicando el teorema \ref{teo1}, tenemos
     \[
-    r_n=[a_0,a_1,...,a_n]=\dfrac{a_nh_{n-1}+h_{n-2}}{a_nk_{n-1}+k_{n-2}}=\dfrac{h_n}{k_n}\]
+    r_n=[a_0;a_1,...,a_n]=\dfrac{a_nh_{n-1}+h_{n-2}}{a_nk_{n-1}+k_{n-2}}=\dfrac{h_n}{k_n}\]
     \end{proof} 
     
     \begin{theorem}
-    Los valores $r_n$, satisfacen las desigualdades, $r_0<r_2<r_4,...,r_3<r_1$, y $\lim_{n\to\infty}r_n$ existe 
+    Los valores $r_n$, satisfacen las desigualdades, $r_0<r_2<r_4,...,r_3<r_1$, y $\displaystyle\lim_{n\to\infty}r_n$ existe 
     \end{theorem}
     \begin{proof}
         Primero probaremos que $h_ik_{i-1}-p_{i-1}q_{i}=(-1)^i$, con $i\geq 0$.
@@ -145,32 +147,29 @@
         r_n-r_{n-2}=\dfrac{h_n}{k_n}-\dfrac{h_{n-2}}{k_{n-2}}=\dfrac{h_nk_{n-2}-h_{n-2}k_n}{k_nk_{n-2}},
         \]
         notemos que 
-        \[
-        \dfrac{h_nk_{n-2}-h_{n-2}k_n}{k_nk_{n-2}}=(a_n h_{n-1}+h_{n-2})k_{n-2}-h_{n-2}(a_n k_{n-1}+k_{n-2})
-        \]
-        \[
-        =a_n(h_{n-1}k_{n-2}-h_{n-2}k_{n-1})=a_n(-1)^{n-1},
-        \]
+        \begin{align*}
+        \dfrac{h_nk_{n-2}-h_{n-2}k_n}{k_nk_{n-2}}= (a_n h_{n-1}+h_{n-2})k_{n-2}-h_{n-2}(a_n k_{n-1}+k_{n-2})= a_n(h_{n-1}k_{n-2}-h_{n-2}k_{n-1})\\=a_n(-1)^{n-1},
+        \end{align*}
     por lo que $r_n-r_{n-2}=a_n(-1)^{n-1}/q_nq_{n-1}$, además $r_n-r_{n-1}=(-1)^n/k_nk_{n-1}$, de lo cual si $n$ es par $r_n-r_{n-1}$ es mayor que cero y $r_n-r_{n-2}$ es menor que cero, en cambio si $n$ es impar $r_n-r_{n-1}$ es positivo y $r_n-r_{n-2}$ es no positivo, de lo cual obtenemos
     \[
     r_0<r_2<...<r_3<r_1.
     \]
-    Ahora la sucesión $r_0,r_2,r_4,...$ definen una sucesión creciente monótona, y acotada superiormente por lo cual tiene un límite. Igualmente $r_1,r_3,r_5,..$ es creciente monótona y acotada inferiormente por lo que también tiene un límite, pero la diferencia entre $r_i-r_{i-1}$ tiende a cero conforme $i$ tiende hacia cero conforme $i$ tiende a infinito, ya que los enteros $k_i$ son crecientes con $i$, por lo cual el límite existe. 
+    Ahora la sucesión $r_0,r_2,r_4,...$ definen una sucesión creciente monótona, y acotada superiormente por lo cual tiene un límite. De igual forma $r_1,r_3,r_5,..$ es decreciente monótona y acotada inferiormente por lo que también tiene un límite, pero la diferencia entre $r_i-r_{i-1}$ tiende a cero conforme $i$ tiende hacia cero conforme $i$ tiende a infinito, ya que los enteros $k_i$ son crecientes con $i$, por lo cual el límite existe. 
     \end{proof}
     \begin{definition}
-    Una sucesión infinita $a_0, a_1, a_2,...$ de enteros positivos exepto tal vez $a_0$, determina una fracción continuada simple infinita $[a_0, a_1, ..., ]$. El valor de $[a_0, a_1, ..., ]$ está definido como $\lim_{n\to\infty}[a_0, a_1, ..., a_n]$.
+    Una sucesión infinita $a_0; a_1, a_2,...$ de enteros positivos exepto tal vez $a_0$, determina una fracción continuada simple infinita $[a_0, a_1, ..., ]$. El valor de $[a_0; a_1, ..., ]$ está definido como $\displaystyle\lim_{n\to\infty}[a_0, a_1, ..., a_n]$.
     \end{definition}  
-    Otra forma de escribir este limite es $\lim_{n\to\infty} h_n/k_n$. El número racional $[a_0, a_1, ...,a_n]=h_n/k_n=r_n$ se llama el $n-$ésimo convergente.
+    Otra forma de escribir este límite es $\lim_{n\to\infty} h_n/k_n$. 
 
     \begin{theorem}
-        El valor de cualquier fracción continuada simple infinita $[a_0,a_1,a_2,...]$ es irracional.
+        El valor de cualquier fracción continuada simple infinita $[a_0;a_1,a_2,...]$ es irracional.
     \end{theorem} 
     
     \begin{proof}
        Escribimos $\xi$ por $[a_0,a_1, a_2, ...]$, observamos que $\xi$ se encuentra entre $r_{n+1}$ y $r_n$, de lo que obtenemos $0<|\xi - r_n|<|r_{n+1}-r_n|$, vimos que $|r_{n+1}-r_n|=(-1)^n/(k_nk_{n-1})$, de lo cual multiplicando por $k_n$, obtenemos $0<|k_n\xi-h_n|<1/k_{n-1}$.
        
-       Ahora supongamos que $\xi$ es racional, digamos $\xi=a/b$ con $a,b$ enteros positivos. Entonces si multiplicamos la desilgualdad anterior por $b$, obtenemos $0<|k_na-h_nb|<b/k_{n-1}$.
-       Los enteros $k_n$ crecen conforme crece $n$, de manera que escogiendo $n$ lo suficientemente grande de manera que $b<k_{n+1}$. Entonces el entero $|k_na-h_nb|$ estaria entre $0$ y $1$, lo cual es imposible.
+       Ahora supongamos que $\xi$ es racional, digamos $\xi=a/b$ con $a,b$ enteros positivos. Entonces si multiplicamos la desigualdad anterior por $b$, obtenemos $0<|k_na-h_nb|<b/k_{n-1}$.
+       Los enteros $k_n$ crecen conforme crece $n$, de manera que escogiendo $n$ lo suficientemente grande de manera que $b<k_{n+1}$. Entonces el entero $|k_na-h_nb|$ estaría entre $0$ y $1$, lo cual es imposible.
     \end{proof}
         
     Para desarrollar una fracción continuada $\xi$ simple infinita, definimos $a_0=\lfloor \xi_0 \rfloor$, $[\xi_1]=1/(\xi-a_0)$ y en seguida $a_1= \lfloor \xi_1 \rfloor, \xi_2=1/(\xi_1-a_1)$, y así mediante una función inductiva tenemos
@@ -183,16 +182,15 @@
     
     Ahora escribamos 
     \[ 
-    \xi=[a_0,a_1,...,a_n.1,\xi_n]=\dfrac{\xi_nh_{n-1}+h_{n-2}}{\xi_nk_{n-1}+k_{n-2}}.
+    \xi=[a_0;a_1,...,a_n.1,\xi_n]=\dfrac{\xi_nh_{n-1}+h_{n-2}}{\xi_nk_{n-1}+k_{n-2}}.
     \]
     Calculemos el valor de $\xi-r_{n-1}$
     \begin{align*}
-        \xi-r_{n-1}=\xi-\dfrac{h_{n-1}}{k_{n-1}}=\dfrac{\xi_nh_{n-1}+h_{n-2}}{\xi_nk_{n-1}+k_{n-2}}-\dfrac{h_{n-1}}{k_{n-1}}\\
-        =\dfrac{-(h_{n-1}k_{n-2}-h_{n-2}k_{n-1})}{k_{n-1}(\xi_nk_{n-1}+k_{n-2})}=\dfrac{(-1)^{n-1}}{k_{n-1}(\xi_nk_{n-1}+k_{n-2})}.
+        \xi-r_{n-1}=\xi-\dfrac{h_{n-1}}{k_{n-1}}=\dfrac{\xi_nh_{n-1}+h_{n-2}}{\xi_nk_{n-1}+k_{n-2}}-\dfrac{h_{n-1}}{k_{n-1}} =& \dfrac{-(h_{n-1}k_{n-2}-h_{n-2}k_{n-1})}{k_{n-1}(\xi_nk_{n-1}+k_{n-2})}=\dfrac{(-1)^{n-1}}{k_{n-1}(\xi_nk_{n-1}+k_{n-2})}.
     \end{align*}
     Esta fracción tiende hacia cero conforme $n$ tiende a infinito, debido a que los enteros $k_n$ son crecientes con $n$ y $\xi_n$ es positivo. De aquí que $\xi_n-r_{n-1}$ tiende hacia cero cuando $n$ tiende al infinito y entonces
         \[
-        \xi=\lim_{n\to\infty} r_n=\lim_{n\to\infty}[a_0,a_1,...,a_n]=[a_0,a_1,a_2,...]
+        \xi=\lim_{n\to\infty} r_n=\lim_{n\to\infty}[a_0;a_1,...,a_n]=[a_0;a_1,a_2,...]
         \]
         
     \subsection*{Fracciones continuadas periódicas}
@@ -201,43 +199,43 @@
     Se dice que una fracción continuada simple infinita $[a_0,a_1,a_2,...]$ es periódica si existe un entero $n$ tal que $a_r=a_{n+r}$, para todos los enteros $r$ suficientemente grandes.
     \end{definition} 
     
-    Por lo tanto una fracción continuada periódica $\xi$ puede escribirse de la siguiente forma
+    Por lo tanto, una fracción continuada periódica $\xi$ puede escribirse de la siguiente forma
         \begin{align*}
-         \xi=[a_0,a_1,a_2,...,a_j,b_0,b_1,...,b_{n-1},b_0,b_1,..,b_{n-1},b_{0},...] 
-        =[a_0,a_1,a_2,...,a_j,\overline{b_0,b_1,...,b_{n-1}}].
+         \xi=[a_0;a_1,a_2,...,a_j,b_0,b_1,...,b_{n-1},b_0,b_1,..,b_{n-1},b_{0},...] 
+        =[a_0;a_1,a_2,...,a_j,\overline{b_0,b_1,...,b_{n-1}}].
         \end{align*}
         \
         Notemos que por el teorema 1 podemos escribir el valor de una fracción continuada simple $\xi$ como 
 
     \begin{equation}
-    \xi=[a_0,a_1,...,a_{n-1},\xi_n]=\dfrac{\xi_n h_{n-1} + h_{n-2}}{\xi_n k_{n-1} + k_{n-2}}  \label{ecuacion_8}
+    \xi=[a_0,a_1,...,a_{n-1},\xi_n]=\dfrac{\xi_n h_{n-1} + h_{n-2}}{\xi_n k_{n-1} + k_{n-2}} , \label{ecuacion_8}
     \end{equation}
     donde $\xi_n=\overline{[b_0,b_1,..,b_{n-1}]}$.
     
 
     \begin{theorem}[Teorema de Lagrange] 
-        Sea $\alpha \in \mathbb{R}$. La fraccion continuada de $\alpha$ es periódica si y solo si existen $a, b, c \in\mathbb{Z}$ con $a\not=0$ tales que $a\alpha^2 + b\alpha + c = 0$.
+        Sea $\alpha \in \mathbb{R}$. La fracción continuada de $\alpha$ es periódica si y solo si existen $a, b, c \in\mathbb{Z}$ con $a\not=0$ tales que $a\alpha^2 + b\alpha + c = 0$.
     \end{theorem}
 
-    Supongamos que $\alpha$ es una fracción continuada periódica, de lo cual $\alpha= [a_0,a_1,...,a_{j},\theta]$, donde $\theta=\overline{[b_0,b_1,..,b_{n-1}]}$, por el teorema $\ref{teo1}$ se sigue que
+    Supongamos que $\alpha$ es una fracción continuada periódica, de lo cual $\alpha= [a_0;a_1,...,a_{j},\theta]$, donde $\theta=\overline{[b_0,b_1,..,b_{n-1}]}$, por el teorema $\ref{teo1}$ se sigue que
         \[
         \theta =\dfrac{\theta h_{n-1}+h_{n-2}}{\theta k_{n-1}+k_{n-2}}
         \]
     y esta es una ecuación cuadrática en $\theta$, de aquí $\theta$ es un número irracional cuadrático o bien un número irracional, pero el valor de cualquier fracción continuada simple infinita es irracional, de lo cual $\alpha$ puede escribirse como 
         \[
-        \alpha = [a_0,a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'}
+        \alpha = [a_0;a_1,..,a_j,\theta]=\dfrac{\theta m + m'}{\theta q + q'},
         \]
     donde $m'/q'$ y $m/q$ son los dos últimos convergentes para $[a_0,a_1,...,a_j]$, pero $\theta$ es de la forma $(a + \sqrt{b})/c$ y de aquí $\alpha$ es de forma similar, debido a que como con $\theta$ puede excluirse la posibilidad de que $\alpha$ sea racional.
 
     Ahora supongamos que $\alpha$ es irracional cuadrático, entonces es de la forma $\alpha=(a+\sqrt{b})/c$, con enteros $a,b,c>0$, $c\not=0$, el entero $b$ no es un cuadrado perfecto, pues  $\alpha$ es irracional. Multipliquemos el numerador y el denominador por $|c|$ para obtener 
         \[
-        \alpha = \dfrac{ac + \sqrt{bc^2}}{c^2} \quad \textnormal{ o bien } \quad \alpha=\dfrac{-ac+\sqrt{bc^2}}{-c^2}
+        \alpha = \dfrac{ac + \sqrt{bc^2}}{c^2} \quad \textnormal{ o bien } \quad \alpha=\dfrac{-ac+\sqrt{bc^2}}{-c^2},
         \]
     de acuerdo con que $c$ sea positiva o negativa. $\alpha$ puede escribirse de la forma
         \[
-        \alpha = \dfrac{m_0+\sqrt{d}}{q_0}
+        \alpha = \dfrac{m_0+\sqrt{d}}{q_0},
         \]
-    donde $q_0|(d-m_0^2)$, $d,m_0$ y $q$ son enteros, $q_0\not=0$ y $d$ no es un entero cuadrado perfecto. Escribiendo $\alpha$ en esta forma podemos obtener una formulación sencilla de su desarrollo fraccionario continuado $\overline{[a_0,a_1,a_2,\dots]}$. Se probara que las siguientes ecuaciones 
+    donde $q_0|(d-m_0^2)$, $d,m_0$ y $q$ son enteros, $q_0\not=0$ y $d$ no es un entero cuadrado perfecto. Escribiendo $\alpha$ en esta forma podemos obtener una formulación sencilla de su desarrollo fraccionario continuado $\overline{[a_0;a_1,a_2,\dots]}$. Se probará que las siguientes ecuaciones 
 
         \begin{equation}
         a_i= \lfloor \alpha_i \rfloor, \qquad \alpha_i=\dfrac{m_i+\sqrt{d}}{q_i}, \label{prueba_ecuacion}
@@ -245,9 +243,9 @@
         \[
         m_{i+1}=a_iq_i-m_i, \qquad q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}
         \] 
-    definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(\ref{ecuacion_1})$ y de donde se obtendra el desarrollo continuado de $\alpha$.
+    definen las sucesiones infinitas de los enteros $m_i,q_i,a_i$ e irracionales $\alpha_i$ de tal forma que se cumplen las ecuaciones $(\ref{ecuacion_1})$ y de donde se obtendrá el desarrollo continuado de $\alpha$.
 
-    En primer lugar, empecemos con $\alpha_0,m_0,q_0$ tal y como se determinaron anteriormente,  hagmaos $a_0=[\alpha_0]$. Si se conocen $\alpha_i,m_i,q_i,a_i$, entonces se tiene que 
+    En primer lugar, empecemos con $\alpha_0,m_0,q_0$ tal y como se determinaron anteriormente,  hagamaos $a_0=[\alpha_0]$. Si se conocen $\alpha_i,m_i,q_i,a_i$, entonces se tiene que 
         \[
          m_{i+1}=a_iq_i - m_i, q_i=(d-m_{i+q}^2)/q_i, \alpha_{i+1}=(m_{i+1} + \sqrt{d})/q_{i+1}, a_i=[\alpha_{i+1}].
          \]
@@ -256,21 +254,21 @@
     
     Ahora se aplica inducción para probar que los $m_i$ y los $q_i$ son enteros tales que $q_i\not=0$ y $q_i|(d-m^2)$. Esto se cumple para $i=0$. Supongamos que es cierto para el $i-$ésimo paso entonces, observamos que $m_{i+1}=a_iq_i-m_i$ es un entero. Entonces la ecuación 
          \[
-        q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}=\dfrac{d-m_i^2}{q_i} + 2a_im_i-a_i^2q_i
+        q_{i+1}=\dfrac{d-m_{i+1}^2}{q_i}=\dfrac{d-m_i^2}{q_i} + 2a_im_i-a_i^2q_i,
         \]
     establece que $q_{i+1}$ es un entero. Es más $q_{i+1}$ no puede ser cero, dado que si lo fuera, se tendría $d=m^2_{i+1}$, pero $d$ no es un cuadrado perfecto. Finalmente, se tiene que $q_i=(d-m_{i+1}^2)/q_{i+1}$, de modo que $q_{i+1}|(d-m_{i+1}^2)$.
     
     Notemos que 
         \[
-        \alpha_i-a_i=\dfrac{-a_iq_i+m_i+\sqrt{d}}{q_i}=\dfrac{\sqrt{d}-m_{i+1}}{q_i}=\dfrac{d-m_{i+1}^2}{q_i(\sqrt{d}+m_{i+1})}=\dfrac{q_i+1}{\sqrt{d}+m_{i+1}}=\dfrac{1}{\alpha_{i+1}}
+        \alpha_i-a_i=\dfrac{-a_iq_i+m_i+\sqrt{d}}{q_i}=\dfrac{\sqrt{d}-m_{i+1}}{q_i}=\dfrac{d-m_{i+1}^2}{q_i(\sqrt{d}+m_{i+1})}=\dfrac{q_i+1}{\sqrt{d}+m_{i+1}}=\dfrac{1}{\alpha_{i+1}},
         \]
     lo cual verifica $(\ref{ecuacion_1})$ y así se ha probado que $\alpha=[a_0,a_1,a_2,...]$, con los $a_i$ definidos por las ecuaciones ($\ref{prueba_ecuacion}$).
     
-    Mediante $\alpha^{'}_{i}$ denotamos el conjunto de $\alpha_i$, esto es $\alpha^{'}_{i}=(m_i-\sqrt{d})/q_i$. Dado que el conjunto de un cociente es igual al cociente de lo conjugado se obtiene la ecuación
+    Mediante $\alpha^{'}_{i}$ denotamos el conjunto de $\alpha_i$, esto es $\alpha^{'}_{i}=(m_i-\sqrt{d})/q_i$. Dado que el conjunto de un cociente es igual al cociente de lo conjugado, se obtiene la ecuación
         \[
-        \alpha_0{'}=\dfrac{\alpha_n^{'}h_{n-1}+h_{n-2}}{\alpha_n^{'}k_{n-1}+k_{n-2}}
+        \alpha_0{'}=\dfrac{\alpha_n^{'}h_{n-1}+h_{n-2}}{\alpha_n^{'}k_{n-1}+k_{n-2}}.
         \]
-    tomando los conjugados en $(\ref{ecuacion_8})$ y resolviendo para $\alpha_n^{'}$ se tiene
+    Tomando los conjugados en $(\ref{ecuacion_8})$ y resolviendo para $\alpha_n^{'}$ se tiene
         \[
         \alpha_n^{'}=-\dfrac{k_{n-2}}{k_{n-1}}\left(\dfrac{\alpha_0^{'}-h_{n-2}/k_{n-2}}{\alpha_0^{'}-h_{n-1}/k_{n-1}}\right).
         \]
@@ -287,35 +285,41 @@
         \[
         m^2_{n+1} < m_{n+1}^2+q_n q_n+1=d, \qquad |m_{n+1}|<\sqrt{d}
         \]
-    para $n>N$. Pues supusimos que $d$ es un entero positivo fijo, se concluye que $q_n$ y $m_{n+1}$, pueden saumir un solo numero fijo de valores posibes para $q_n$ y $m_{n+1}$ pueden asumir sólo un número fijo de valores posibles para $n>N$. De aquí que las parejas ordenadas $(m_n,q_n)$ pueden asumir sólo un número fijo de valores posibles, de la parejas para $n>N$, y por tanto existen enteros distints $j$ y $k$ tales que $m_j=m_k$ y $q_j=q_k$, pueden suponerse que se han escogido $j$ y $k$ tales que $j<k$. Por (\ref{prueba_ecuacion}), esto implica que $\alpha_j=\alpha_k$ y de aquí que
+        
+    para $n>N$. Pues supusimos que $d$ es un entero positivo fijo, se concluye que $q_n$ y $m_{n+1}$, pueden asumir un solo número fijo de valores posibles para $q_n$ y $m_{n+1}$ pueden asumir sólo un número fijo de valores posibles para $n>N$. De aquí que las parejas ordenadas $(m_n,q_n)$ pueden asumir sólo un número fijo de valores posibles, de la parejas para $n>N$, y por tanto existen enteros distintos $j$ y $k$ tales que $m_j=m_k$ y $q_j=q_k$, pueden suponerse que se han escogido $j$ y $k$ tales que $j<k$. Por (\ref{prueba_ecuacion}), esto implica que $\alpha_j=\alpha_k$ y de aquí que
         \[
-        \alpha=[a_0,a_1,...,a_{j-1},\overline{a_j,a_{j+1},...,a_{k-1}}].
+        \alpha=[a_0;a_1,...,a_{j-1},\overline{a_j,a_{j+1},...,a_{k-1}}].
         \]
     \section*{Aplicaciones de las Fracciones Continuadas}
-     A continuación presentamos algunas de las aplicaciones de las fracciones continuadas, son la mejor aproximación posible a números irracionales, tambien la teoría de las fracciones continuadas son usadas para resolver ecuaciones diofánticas, llamdas de Pell, y se puede ver a través de los siguientes teoremas.
+     A continuación presentamos algunas aplicaciones de las fracciones continuadas; son la mejor aproximación posible a números irracionales, tambien la teoría de las fracciones continuadas son usadas para resolver ecuaciones diofánticas, llamdas de Pell, y se puede ver a través de los siguientes teoremas.
      
      \begin{theorem}
-         Si $\xi$ es un número irracional, $a/b$ es un número racional, con denomidador positivo tal que $|\xi - a/b|<|\xi-h_n/k_n|$ para algún $n\geq 1$, entonces $b>k_n$.
-     \end{theorem} 
+         Si $\xi$ es un número irracional, $a/b$ es un número racional, con denomidador positivo tal que $|\xi - a/b|<|\xi-h_n/k_n|$ para algún $n\geq 1$, entonces $b>k_n$. \textnormal{(Véase \cite{Niven} pp. 158-159)}.
+     \end{theorem}
      
     \begin{theorem}
-        Sean  $a,b,c$ números enteros, $(h_n)_{n\geq 1}, (K_n)_{n\geq 1}$ las sucesiones anteriormente definidads, se tiene que la solución a, $ax+by=c$ donde $(a,b)=1$, es el par $x_0 = (-1)^{n-1} (h_{n-1})c,\quad y_0=(-1)^n (k_{n-1})c$.
+        Sean  $a,b,c$ números enteros, $(h_n)_{n\geq 1}, (k_n)_{n\geq 1}$ las sucesiones anteriormente definidas, se tiene que la solución a, $ax+by=c$ donde $(a,b)=1$, es el par $x_0 = (-1)^{n-1} (h_{n-1})c,\quad y_0=(-1)^n (k_{n-1})c$. \textnormal{(Véase \cite{Olds} pp. 44-46)}.
+
      
     \end{theorem} 
     
      \section*{Glosario de simbología}
      
-     $(a,b)$ : máximo comun divisor entre a y b.
+     $(a,b)$ : máximo común divisor entre a y b.
      
      $\lfloor x \rfloor$ : parte entrera  de $x$ o función piso de $x$.
      
      $|x|$ : valor absoluto de $x$.
-
-     \section*{Referencias bibliográficas}
-     Niven I., Zuckerman S. H., Montgomery L. H., \textit{An introduction to the theory of numbers}, Wiley, 1991.
+    \begin{comment}
+        \section{Referencias}
+    \end{comment}
+     \begin{thebibliography}{9}
+     
+        \bibitem{Niven} Niven I., Zuckerman S. H., Montgomery L. H., \textit{An introduction to the theory of numbers}, Wiley, 1991.
     
-      Olds C. D., \textit{Continued fractions}, New mathematical library, Random House, 1963.
+        \bibitem{Olds} Olds C. D., \textit{Continued fractions}, New mathematical library, Random House, 1963.
      
-     Silverman H. Joseph, \textit{A friendly introduction to number theory}, Pearson, 2012.
-     
+        \bibitem{Silverman} Silverman H. Joseph, \textit{A friendly introduction to number theory}, Pearson, 2012.
+    \end{thebibliography}
+
 \end{document}
